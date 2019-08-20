@@ -11,8 +11,10 @@ import Foundation
 var movies: [MovieList] = []
 var userRequest: String = " "
 var  downloadTask: URLSessionDownloadTask?
+
 var urlToData: URL {
-    let path = NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true)[0] + "data.json"
+    let tempPath = NSSearchPathForDirectoriesInDomains(.libraryDirectory, .userDomainMask, true)[0]
+    let path = "\(tempPath)/data.json"
     let urlPath = URL(fileURLWithPath: path)
     return urlPath
 }
