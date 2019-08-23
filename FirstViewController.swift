@@ -8,24 +8,35 @@
 
 import UIKit
 
-var movieToSearch = ""
+
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer =     UITapGestureRecognizer(target: self, action:    #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+ 
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
+
+var searchMovie = " "
 
 class FirstViewController: UIViewController {
 
-    @IBOutlet weak var searchMovie: UITextField!
-    
- 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround()
         
-        
-
     }
-    @IBAction func searchButton(_ sender: Any) {
-        movieToSearch = searchMovie.text!
-         performSegue(withIdentifier: "goToFoundMovies", sender: self)
-       movieToSearch = searchMovie.text!
-    }
+    @IBOutlet weak var movieToSearch: UITextField!
     
-   
+    @IBAction func movieToSerchButton(_ sender: Any) {
+        searchMovie  = String(movieToSearch.text!)
+        searchMovie  = searchMovie.replacingOccurrences(of: " ", with: "+")
+        performSegue(withIdentifier: "goToFoundMovies", sender: self)
+    }
+
 }

@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6E0408AF230DD8A900459653 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E0408AE230DD8A900459653 /* Assets.xcassets */; };
 		6E17E47723035D6D00A1FF5E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E17E47623035D6D00A1FF5E /* FirstViewController.swift */; };
 		6E4AC40E23021F8800E6AD9C /* OneMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4AC40D23021F8800E6AD9C /* OneMovieViewController.swift */; };
 		6E4DDF9822F7278900C979ED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4DDF9722F7278900C979ED /* AppDelegate.swift */; };
 		6E4DDF9D22F7278900C979ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E4DDF9B22F7278900C979ED /* Main.storyboard */; };
-		6E4DDF9F22F7278D00C979ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E4DDF9E22F7278D00C979ED /* Assets.xcassets */; };
 		6E4DDFA222F7278D00C979ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E4DDFA022F7278D00C979ED /* LaunchScreen.storyboard */; };
 		6E4DDFAB22F7299B00C979ED /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4DDFAA22F7299B00C979ED /* Movie.swift */; };
 		6E4DDFAD22F729B800C979ED /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E4DDFAC22F729B800C979ED /* Model.swift */; };
@@ -19,12 +19,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6E0408AE230DD8A900459653 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E17E47623035D6D00A1FF5E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		6E4AC40D23021F8800E6AD9C /* OneMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneMovieViewController.swift; sourceTree = "<group>"; };
 		6E4DDF9422F7278900C979ED /* Movies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E4DDF9722F7278900C979ED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E4DDF9C22F7278900C979ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6E4DDF9E22F7278D00C979ED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E4DDFA122F7278D00C979ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E4DDFA322F7278D00C979ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6E4DDFAA22F7299B00C979ED /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
@@ -48,6 +48,7 @@
 			children = (
 				6E17E47623035D6D00A1FF5E /* FirstViewController.swift */,
 				6E4AC40D23021F8800E6AD9C /* OneMovieViewController.swift */,
+				6E0408AE230DD8A900459653 /* Assets.xcassets */,
 				6E4DDF9622F7278900C979ED /* Movies */,
 				6E4DDF9522F7278900C979ED /* Products */,
 			);
@@ -67,7 +68,6 @@
 				6E4DDFA922F7297500C979ED /* Model */,
 				6E4DDF9722F7278900C979ED /* AppDelegate.swift */,
 				6E4DDF9B22F7278900C979ED /* Main.storyboard */,
-				6E4DDF9E22F7278D00C979ED /* Assets.xcassets */,
 				6E4DDFA022F7278D00C979ED /* LaunchScreen.storyboard */,
 				6E66695722FF1DDD008F1BEB /* TableViewController.swift */,
 				6E4DDFA322F7278D00C979ED /* Info.plist */,
@@ -143,7 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6E4DDFA222F7278D00C979ED /* LaunchScreen.storyboard in Resources */,
-				6E4DDF9F22F7278D00C979ED /* Assets.xcassets in Resources */,
+				6E0408AF230DD8A900459653 /* Assets.xcassets in Resources */,
 				6E4DDF9D22F7278900C979ED /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

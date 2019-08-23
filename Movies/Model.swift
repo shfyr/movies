@@ -23,7 +23,7 @@ var urlToData: URL {
 func loadMovies (completionHandler: (()->Void)?) {
     downloadTask?.cancel()
      movies.removeAll()
-    let url = URL(string: "https://api.themoviedb.org/3/search/movie?api_key=69c974d356faeb073d5dab463e8a63e5&query=\( movieToSearch)")
+    let url = URL(string: "https://api.themoviedb.org/3/search/movie?api_key=69c974d356faeb073d5dab463e8a63e5&query=\( searchMovie)")
     let session = URLSession(configuration: .default)
     let downloadTask = session.downloadTask(with: url!) { (urlFile, responce, error) in
         if urlFile != nil {
@@ -34,8 +34,7 @@ func loadMovies (completionHandler: (()->Void)?) {
            
             parseMovies()
             completionHandler?()
-            print(movies)
-//            print(movieToSearch)
+
         }
     }
     downloadTask.resume()
