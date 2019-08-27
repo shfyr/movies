@@ -44,9 +44,10 @@ class TableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        var movie = movies[indexPath.row]
+        let movie = movies[indexPath.row]
         let poster_URL = "https://image.tmdb.org/t/p/w500\(movie.poster_path)"
         
+
         cell.textLabel?.text = movie.title
         cell.detailTextLabel?.text = movie.release_date
         
@@ -54,8 +55,8 @@ class TableViewController: UITableViewController {
             if let data = try? Data(contentsOf: url) {
                  cell.imageView?.image = UIImage(data: data)
             }
-           
         }
+        
         
         return cell
     }
