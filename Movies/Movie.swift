@@ -1,14 +1,14 @@
 //
 //  Movie.swift
-//  Movies
+//  Movie
 //
-//  Created by Elizaveta Prokudina on 04/08/2019.
+//  Created by Elizaveta Prokudina on 01.10.2019.
 //  Copyright © 2019 Elizaveta Prokudina. All rights reserved.
 //
 
 import Foundation
 
-struct MovieList {
+struct Movie {
     var poster_path: String
     var title: String
     var release_date: String
@@ -24,6 +24,3 @@ struct MovieList {
         original_language = dictionary["original_language"] as? String ?? " "
     }
 }
-
-
-

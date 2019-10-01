@@ -31,6 +31,7 @@ class FirstViewController: UIViewController {
         self.hideKeyboardWhenTappedAround()
         
     }
+    
     @IBOutlet weak var movieToSearch: UITextField!
     
     @IBAction func movieToSerchButton(_ sender: Any) {

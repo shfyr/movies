@@ -1,14 +1,14 @@
 //
-//  Model.swift
-//  Movies
+//  LoadMovies.swift
+//  LoadMovies
 //
 //  Created by Elizaveta Prokudina on 04/08/2019.
 //  Copyright © 2019 Elizaveta Prokudina. All rights reserved.
-//
+
 
 import Foundation
 
-var movies: [MovieList] = []
+var movies: [Movie] = []
 var userRequest: String = " "
 var  downloadTask: URLSessionDownloadTask?
 
@@ -31,17 +31,14 @@ func loadMovies (completionHandler: (()->Void)?) {
             try? FileManager.default.removeItem(at: urlToData)
             try?  FileManager.default.copyItem(at: urlFile!, to: urlToData)
             
-           
             parseMovies()
             completionHandler?()
-
         }
     }
     downloadTask.resume()
-    }
+}
 
 func parseMovies() {
-    
    
     let data = try? Data(contentsOf: urlToData)
     if data == nil {
@@ -49,26 +46,25 @@ func parseMovies() {
     }
     
     let rootDictionaryAny = try? JSONSerialization.jsonObject(with: data!, options: .allowFragments)
+    
     if rootDictionaryAny == nil {
         return
     }
     
     let rootDictionary = rootDictionaryAny as? Dictionary<String,Any>
+    
     if rootDictionary == nil {
         return
     }
     
     if let array = rootDictionary!["results"] as? [Dictionary<String, Any>] {
-        var returnArray: [MovieList] = []
+        var returnArray: [Movie] = []
         
         for dict in array {
-            let newMovie = MovieList(dictionary: dict)
+            let newMovie = Movie(dictionary: dict)
             returnArray.append(newMovie)
     }
         movies = returnArray
-   
     }
-    
-    
 }
 

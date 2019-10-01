@@ -1,5 +1,5 @@
 //
-//  OneMovieViewController.swift
+//  MovieViewController.swift
 //  Movies
 //
 //  Created by Elizaveta Prokudina on 13/08/2019.
@@ -8,12 +8,11 @@
 
 import UIKit
 
-class OneMovieViewController: UIViewController {
+class MovieViewController: UIViewController {
 
     
-    var movie: MovieList!
+    var movie: Movie!
     
-
     @IBOutlet weak var movieTitle: UILabel!
     @IBOutlet weak var movieReleaseDate: UILabel!
     @IBOutlet weak var originalLanguage: UILabel!
@@ -26,8 +25,9 @@ class OneMovieViewController: UIViewController {
         movieTitle.text? = movie.title
         movieReleaseDate.text? = movie.release_date
         movieOverview.text? = movie.overview
-        movieOverview.sizeToFit()
         originalLanguage.text? = movie.original_language
+        
+        movieOverview.sizeToFit()
         
         let poster_URL = "https://image.tmdb.org/t/p/w500\(movie.poster_path)"
         if let url = URL (string: poster_URL) {
